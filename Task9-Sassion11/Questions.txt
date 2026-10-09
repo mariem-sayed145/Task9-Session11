@@ -1,0 +1,25 @@
+Question In your own words, explain: What problem does Func<> solve compared with creating a custom delegate? 
+==> Func<> is a built-in generic delegate in C# that allows us to represent methods or lambda expressions that return a value. It reduces the need to create custom delegates when we need the same parameter and return types in different places.
+
+For example, instead of defining a custom delegate such as PriceCalculator, we can use Func<Order, decimal> to represent a function that takes an Order object and returns a decimal value.
+
+This makes the code shorter and more reusable.
+
+===================================================================================================
+
+Question
+Why is Predicate<Order> more expressive here than:
+Func<Order, bool>
+even though both can represent a function that returns bool?
+
+==> Predicate<Order> is more expressive than Func<Order, bool> because it clearly indicates that the function is intended to evaluate a condition or test a property of the Order object. 
+The name "Predicate" conveys the purpose of the delegate, 
+which is to return a boolean value based on some criteria, 
+making the code more readable and understandable. I
+n contrast, Func<Order, bool> is more generic and does not provide any context about what the boolean result represents, 
+which can lead to confusion about its intended use.
+
+
+====================================================================================================
+
+
